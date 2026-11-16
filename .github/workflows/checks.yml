@@ -11,12 +11,12 @@ jobs:
         with:
           node-version: '22'
       - name: Build Windows app
-        shell: powershell
+        shell: pwsh
         run: ./程序源码/build.ps1
       - name: Check export engine and retry path
         run: node ./程序源码/test-engine.cjs
       - name: Check local file validation
-        shell: powershell
+        shell: pwsh
         run: |
           $process = Start-Process -FilePath './ChatGPT全量备份助手.exe' -ArgumentList '--self-test' -Wait -PassThru -WindowStyle Hidden
           if ($process.ExitCode -ne 0) { throw 'Self-test failed' }
