@@ -1,0 +1,13 @@
+*.exe
+*.zip
+*.log
+备份设置.json*
+.任务缓存/
+20??-??-??/
+chatgpt-export-json/
+chatgpt-export-markdown*/
+自检结果.txt
+导出引擎测试结果.txt
+node_modules/
+dist/
+*.tmp
